@@ -17,10 +17,9 @@ public class pemilihantempatduduk extends javax.swing.JFrame {
      * Creates new form pemilihantempatduduk
      */
     ArrayList namabutton = new ArrayList();
-    String namafilm;
+    String namafilm,hrg,tmptddk,jam,tanggal,tanggaldanjam;
     int harga,i = 0,totalharga;
     public pemilihantempatduduk(String namafilm) {
-        
         initComponents();
        
         this.namafilm = namafilm;
@@ -37,8 +36,10 @@ public class pemilihantempatduduk extends javax.swing.JFrame {
                 jLabel7.setText(String.valueOf(harga));
             }
         jLabel5.setText(this.namafilm);
+
+        
+     
     }
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -236,7 +237,7 @@ public class pemilihantempatduduk extends javax.swing.JFrame {
         jLabel3.setText("Tempat Duduk :");
 
         jButton1.setBackground(new java.awt.Color(51, 204, 0));
-        jButton1.setText("Detail Pesanan");
+        jButton1.setText("Konfirmasi");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -740,11 +741,20 @@ public class pemilihantempatduduk extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        DetailPemesanan DetailPemesananFrame = new DetailPemesanan();
-        DetailPemesananFrame.setVisible(true);
-        DetailPemesananFrame.pack();
-        DetailPemesananFrame.setLocationRelativeTo(null);
+        // TODO add your handling code here:;
+        hrg = String.valueOf(totalharga);
+        tmptddk= String.valueOf(namabutton);
+        tanggal = String.valueOf(pimilihanwaktu.cmb1.getSelectedItem());
+        jam = String.valueOf(pimilihanwaktu.cmb2.getSelectedItem());
+        tanggaldanjam = (tanggal+" : "+jam);
+        DetailPemesanan dp = new DetailPemesanan();
+        dp.jLabel6.setText(jLabel5.getText());
+        dp.jLabel7.setText(tmptddk);
+        dp.jLabel8.setText(tanggaldanjam);
+        dp.jLabel9.setText(hrg);
+        dp.setVisible(true);
+        dp.pack();
+        dp.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -784,7 +794,7 @@ public class pemilihantempatduduk extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new pemilihantempatduduk("").setVisible(true);
+                new pemilihantempatduduk(" ").setVisible(true);
             }
         });
     }

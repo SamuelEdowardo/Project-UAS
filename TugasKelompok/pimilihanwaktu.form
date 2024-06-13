@@ -53,8 +53,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jComboBox2" min="-2" pref="124" max="-2" attributes="0"/>
-                              <Component id="jComboBox1" alignment="0" min="-2" pref="155" max="-2" attributes="0"/>
+                              <Component id="cmb2" min="-2" pref="124" max="-2" attributes="0"/>
+                              <Component id="cmb1" alignment="0" min="-2" pref="155" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="373" max="32767" attributes="0"/>
                       </Group>
@@ -82,11 +82,11 @@
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+                  <Component id="cmb1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jComboBox2" min="-2" max="-2" attributes="0"/>
+                  <Component id="cmb2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -109,25 +109,27 @@
             <Property name="text" type="java.lang.String" value="Tanggal :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBox1">
+        <Component class="javax.swing.JComboBox" name="cmb1">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="7">
-                <StringItem index="0" value="Rabu/31/Mei/2024"/>
-                <StringItem index="1" value="Kamis/1/Juni/2024"/>
-                <StringItem index="2" value="Jumat/2/Juni/2024"/>
-                <StringItem index="3" value="Sabtu/3/Juni/2024"/>
-                <StringItem index="4" value="Minggu/4/Juni/2024"/>
-                <StringItem index="5" value="Senin/5/Juni/2024"/>
-                <StringItem index="6" value="Selasa/6/Juni/2024"/>
+              <StringArray count="8">
+                <StringItem index="0" value="Pilih tanggal"/>
+                <StringItem index="1" value="Rabu/31/Mei/2024"/>
+                <StringItem index="2" value="Kamis/1/Juni/2024"/>
+                <StringItem index="3" value="Jumat/2/Juni/2024"/>
+                <StringItem index="4" value="Sabtu/3/Juni/2024"/>
+                <StringItem index="5" value="Minggu/4/Juni/2024"/>
+                <StringItem index="6" value="Senin/5/Juni/2024"/>
+                <StringItem index="7" value="Selasa/6/Juni/2024"/>
               </StringArray>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmb1ActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
@@ -141,23 +143,25 @@
             <Property name="text" type="java.lang.String" value="Jam :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBox2">
+        <Component class="javax.swing.JComboBox" name="cmb2">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="5">
-                <StringItem index="0" value="13:00 WIB"/>
-                <StringItem index="1" value="15:30 WIB"/>
-                <StringItem index="2" value="17:30 WIB"/>
-                <StringItem index="3" value="20:00 WIB"/>
-                <StringItem index="4" value="23:00 WIB"/>
+              <StringArray count="6">
+                <StringItem index="0" value="Pilih jam"/>
+                <StringItem index="1" value="13:00 WIB"/>
+                <StringItem index="2" value="15:30 WIB"/>
+                <StringItem index="3" value="17:30 WIB"/>
+                <StringItem index="4" value="20:00 WIB"/>
+                <StringItem index="5" value="23:00 WIB"/>
               </StringArray>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmb2ActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="jButton1">
@@ -203,6 +207,9 @@
               <Connection code="this.namafilm" type="code"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="ancestorAdded" listener="javax.swing.event.AncestorListener" parameters="javax.swing.event.AncestorEvent" handler="jLabel3AncestorAdded"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
